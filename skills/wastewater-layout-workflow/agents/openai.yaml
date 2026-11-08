@@ -1,0 +1,6 @@
+interface:
+  display_name: "污水工艺与加药布置简图"
+  short_description: "从 CAD 或 SCADA 制作可编辑池体及加药泵阀简图，沿用个人样式并导出 Word 插图"
+  default_prompt: "使用 $wastewater-layout-workflow 根据这份图纸或 SCADA 照片画可编辑布置简图，核对设备和出口数量，突出本次新增内容，输出 PPT 和 PNG。"
+policy:
+  allow_implicit_invocation: true

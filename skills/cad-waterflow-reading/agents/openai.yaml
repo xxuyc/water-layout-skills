@@ -1,0 +1,6 @@
+interface:
+  display_name: "生物池水路识图"
+  short_description: "识别生物池导流墙与过水孔，区分浮渣孔，形成可核对的区域连通记录"
+  default_prompt: "使用 $cad-waterflow-reading 读取这份生物池图纸，整理分区、导流墙、过水孔和待核实项。"
+policy:
+  allow_implicit_invocation: true

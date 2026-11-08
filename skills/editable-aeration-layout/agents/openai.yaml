@@ -1,0 +1,6 @@
+interface:
+  display_name: "精确曝气可编辑布置图"
+  short_description: "按确认池形制作可编辑曝气图，完整镜像隔墙与设备，紧凑排版用于 Word"
+  default_prompt: "使用 $editable-aeration-layout 根据这份图纸或修改稿制作可编辑布置图，保留过水孔与导流墙，并输出 Word 插图。"
+policy:
+  allow_implicit_invocation: true
