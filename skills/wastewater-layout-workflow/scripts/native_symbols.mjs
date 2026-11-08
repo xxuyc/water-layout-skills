@@ -1,6 +1,6 @@
 /** Native editable evidence symbols for an artifact-tool Slide. No inferred topology. */
 export function createSymbols(slide, {fontFamily='Microsoft YaHei', colors={}}={}) {
-  const palette = {black:'#171717', water:'#4578CE', valve:'#E83732', air:'#00D51B', added:'#2873B8', ...colors};
+  const palette = {black:'#171717', water:'#4578CE', valve:'#E83732', air:'#00D000', added:'#2873B8', ...colors};
   let id=0;
   function shape(geometry,x,y,width,height,{fill='none',stroke=palette.black,lineWidth=1.6,name}={}) {
     return slide.shapes.add({name:name??`diagram-${++id}`,geometry,position:{left:x,top:y,width,height},fill,line:{fill:stroke,width:lineWidth,style:'solid'}});
@@ -38,9 +38,9 @@ export function createSymbols(slide, {fontFamily='Microsoft YaHei', colors={}}={
     if(electric) result.push(line(x,y-r,x,y-r-10,color),shape('rect',x-5,y-r-17,10,7,{fill:'white',stroke:color}));
     return result;
   }
-  function flow(x,y,{color=palette.black,r=14}={}) {
+  function flow(x,y,{color=palette.valve,r=14,letter='F'}={}) {
     const circle=shape('ellipse',x-r,y-r,2*r,2*r,{fill:'white',stroke:color});
-    const label=text('F',x,y-r-1,{width:2*r,height:2*r+3,size:21,align:'center',color});
+    const label=text(letter,x,y-r-1,{width:2*r,height:2*r+3,size:21,align:'center',color});
     return [circle,label];
   }
   return {palette,shape,line,pipe,text,arrow,instrument,pump,valve,flow};
