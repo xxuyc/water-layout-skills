@@ -1,0 +1,9 @@
+{
+  "skills": [
+    "cad-waterflow-reading",
+    "editable-aeration-layout",
+    "wastewater-layout-workflow"
+  ],
+  "method": "frontmatter and relative links checked with stdlib; bundled quick_validate unavailable because PyYAML missing",
+  "reference_assets_present": true
+}
